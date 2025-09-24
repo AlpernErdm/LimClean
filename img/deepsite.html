@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIMCLEAN - Profesyonel Buharlı Temizlik Hizmetleri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://static.photos/cleaning/1200x630/1');
+            background-size: cover;
+            background-position: center;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+        }
+        .whatsapp-btn {
+            background-color: #25D366;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="img/header.jpg" alt="LIMCLEAN Logo" class="h-12">
+                <h1 class="ml-3 text-xl font-bold text-blue-800">LİM CLEAN</h1>
+            </div>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-8">
+                    <li><a href="#home" class="text-blue-800 font-medium hover:text-blue-600">Anasayfa</a></li>
+                    <li><a href="#services" class="text-blue-800 font-medium hover:text-blue-600">Hizmetlerimiz</a></li>
+                    <li><a href="#about" class="text-blue-800 font-medium hover:text-blue-600">Hakkımızda</a></li>
+                    <li><a href="#contact" class="text-blue-800 font-medium hover:text-blue-600">İletişim</a></li>
+                </ul>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-blue-800">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden bg-white w-full absolute left-0 shadow-lg">
+            <ul class="px-4 py-2">
+                <li><a href="#home" class="block py-2 text-blue-800 font-medium">Anasayfa</a></li>
+                <li><a href="#services" class="block py-2 text-blue-800 font-medium">Hizmetlerimiz</a></li>
+                <li><a href="#about" class="block py-2 text-blue-800 font-medium">Hakkımızda</a></li>
+                <li><a href="#contact" class="block py-2 text-blue-800 font-medium">İletişim</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6" data-aos="fade-down">Profesyonel Buharlı Temizlik Hizmetleri</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                Hijyenik, ekonomik ve çevre dostu buharlı temizlik çözümleri ile yaşam alanlarınızı yenileyin.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4" data-aos="fade-up" data-aos-delay="200">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                    Hemen Teklif Al
+                </a>
+                <a href="tel:+905555555555" class="bg-white hover:bg-gray-100 text-blue-800 font-bold py-3 px-6 rounded-lg transition duration-300">
+                    <i class="fas fa-phone mr-2"></i> 0555 555 55 55
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12" data-aos="fade-down">Hizmetlerimiz</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up">
+                    <img src="http://static.photos/cleaning/640x360/1" alt="Ev Temizliği" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Ev Temizliği</h3>
+                        <p class="text-gray-600 mb-4">
+                            Buharın gücüyle evinizin her köşesini derinlemesine temizliyor, hijyenik ve sağlıklı bir ortam sunuyoruz.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Halı ve koltuk temizliği</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Zemin temizliği</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Banyo ve mutfak temizliği</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <img src="http://static.photos/office/640x360/1" alt="Ofis Temizliği" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Ofis Temizliği</h3>
+                        <p class="text-gray-600 mb-4">
+                            İş yerlerinizde hijyen standartlarını en üst seviyeye çıkarıyor, çalışanlarınız için sağlıklı bir ortam sağlıyoruz.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Ofis koltuk temizliği</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Toplantı salonu temizliği</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Ortak alan temizliği</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="service-card bg-white rounded-lg shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                    <img src="http://static.photos/hotel/640x360/1" alt="Otel Temizliği" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-blue-800 mb-3">Otel Temizliği</h3>
+                        <p class="text-gray-600 mb-4">
+                            Otel ve konaklama tesislerinizde misafir memnuniyetini artıracak profesyonel buharlı temizlik hizmeti.
+                        </p>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Otel odası temizliği</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Restoran ve lobi temizliği</li>
+                            <li class="flex items-center"><i class="fas fa-check text-green-500 mr-2"></i> Yatak ve yorgan temizliği</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0" data-aos="fade-right">
+                    <img src="http://static.photos/team/640x360/1" alt="LIMCLEAN Ekibi" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12" data-aos="fade-left">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-800 mb-6">Hakkımızda</h2>
+                    <p class="text-gray-600 mb-4">
+                        LIMCLEAN olarak, sektördeki 10 yılı aşkın deneyimimizle İstanbul ve çevresinde profesyonel buharlı temizlik hizmetleri sunmaktayız.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        Ekip olarak en büyük önceliğimiz müşteri memnuniyeti ve hijyen standartlarının en üst seviyede tutulmasıdır. Kullandığımız son teknoloji buharlı temizlik makineleri ile kimyasal kullanmadan, çevre dostu bir şekilde temizlik yapıyoruz.
+                    </p>
+                    <p class="text-gray-600 mb-6">
+                        Hizmet verdiğimiz alanlar arasında evler, ofisler, oteller, restoranlar, araç içi temizlikleri ve daha birçok alan bulunmaktadır.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="bg-blue-50 p-4 rounded-lg flex-1 min-w-[150px]">
+                            <h4 class="text-blue-800 font-bold text-xl mb-1">10+</h4>
+                            <p class="text-gray-600">Yıllık Deneyim</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg flex-1 min-w-[150px]">
+                            <h4 class="text-blue-800 font-bold text-xl mb-1">1000+</h4>
+                            <p class="text-gray-600">Mutlu Müşteri</p>
+                        </div>
+                        <div class="bg-blue-50 p-4 rounded-lg flex-1 min-w-[150px]">
+                            <h4 class="text-blue-800 font-bold text-xl mb-1">%100</h4>
+                            <p class="text-gray-600">Müşteri Memnuniyeti</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-blue-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12" data-aos="fade-down">Neden Biz?</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center p-6" data-aos="fade-up">
+                    <div class="bg-blue-700 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-leaf text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Çevre Dostu</h3>
+                    <p class="text-blue-100">
+                        Kimyasal kullanmadan, buharın gücüyle temizlik yapıyoruz. Doğaya ve sağlığınıza zarar vermiyoruz.
+                    </p>
+                </div>
+                
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-700 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hızlı ve Etkili</h3>
+                    <p class="text-blue-100">
+                        Yüksek basınçlı buhar makinelerimizle kısa sürede derinlemesine temizlik sağlıyoruz.
+                    </p>
+                </div>
+                
+                <div class="text-center p-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-700 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hijyen Garantisi</h3>
+                    <p class="text-blue-100">
+                        120°C'ye varan buhar sıcaklığı ile bakteri ve mikropları %99.9 oranında yok ediyoruz.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12" data-aos="fade-down">Müşteri Yorumları</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/1" alt="Müşteri" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Ayşe K.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Evimde yıllardır biriken lekeleri buharlı temizlik sayesinde çıkardılar. Koltuklarım adeta yenilenmiş gibi oldu. Kesinlikle tavsiye ederim."
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/2" alt="Müşteri" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Mehmet E.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Ofisimiz için düzenli olarak hizmet alıyoruz. Personelimizin sağlığı için buharlı temizliğin ne kadar önemli olduğunu anladık. Profesyonel ekibe teşekkürler."
+                    </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex items-center mb-4">
+                        <img src="http://static.photos/people/200x200/3" alt="Müşteri" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Zeynep T.</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">
+                        "Alerjik bünyeli çocuğum için evimizi buharlı temizlettik. Toz akarlarından kurtulduk ve çocuğumun alerji şikayetleri azaldı. Çok memnun kaldık."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-12" data-aos="fade-down">İletişim</h2>
+            
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-gray-700 font-medium mb-2">Adınız</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Telefon</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-gray-700 font-medium mb-2">E-posta</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        <div>
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Hizmet Türü</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                                <option value="">Seçiniz</option>
+                                <option value="ev">Ev Temizliği</option>
+                                <option value="ofis">Ofis Temizliği</option>
+                                <option value="otel">Otel Temizliği</option>
+                                <option value="arac">Araç İçi Temizlik</option>
+                                <option value="diger">Diğer</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Mesajınız</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 w-full">
+                            Gönder
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-md h-full">
+                        <h3 class="text-xl font-bold text-blue-800 mb-4">İletişim Bilgileri</h3>
+                        
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Adres</h4>
+                                    <p class="text-gray-600">İstanbul, Türkiye</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-phone text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Telefon</h4>
+                                    <p class="text-gray-600">0555 555 55 55</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">E-posta</h4>
+                                    <p class="text-gray-600">limcleanliman@gmail.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-blue-100 p-2 rounded-full mr-4">
+                                    <i class="fas fa-clock text-blue-800"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800">Çalışma Saatleri</h4>
+                                    <p class="text-gray-600">Pazartesi - Cumartesi: 08:00 - 20:00</p>
+                                    <p class="text-gray-600">Pazar: Kapalı</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-bold text-gray-800 mb-3">Sosyal Medya</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="bg-blue-100 p-3 rounded-full text-blue-800 hover:bg-blue-200 transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 p-3 rounded-full text-blue-800 hover:bg-blue-200 transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-blue-100 p-3 rounded-full text-blue-800 hover:bg-blue-200 transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <div class="h-96 w-full">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.279637015955!2d28.9788583157258!3d41.00819492788258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9eb9d587135%3A0x8aa0bb6b1dd6ffb7!2s%C4%B0stanbul!5e0!3m2!1str!2str!4v1623942274769!5m2!1str!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/905555555555" class="fixed bottom-6 right-6 whatsapp-btn text-white p-4 rounded-full shadow-lg">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <img src="img/header.jpg" alt="LIMCLEAN Logo" class="h-10">
+                        <h2 class="ml-3 text-xl font-bold">LİM CLEAN</h2>
+                    </div>
+                    <p class="mt-2 text-blue-200">Profesyonel Buharlı Temizlik Hizmetleri</p>
+                </div>
+                
+                <div class="text-center md:text-right">
+                    <p class="text-blue-200">© 2025 LIMCLEAN. Tüm hakları saklıdır.</p>
+                    <div class="mt-2 flex justify-center md:justify-end space-x-4">
+                        <a href="#" class="text-blue-200 hover:text-white">Gizlilik Politikası</a>
+                        <a href="#" class="text-blue-200 hover:text-white">Kullanım Şartları</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile menu toggle
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+            
+            // Change icon
+            const icon = this.querySelector('svg');
+            if (menu.classList.contains('hidden')) {
+                feather.replace();
+            } else {
+                icon.innerHTML = feather.icons.x.toSvg();
+            }
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+                document.querySelector('#menu-toggle svg').innerHTML = feather.icons.menu.toSvg();
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+    <script>feather.replace();</script>
+</body>
+</html>
