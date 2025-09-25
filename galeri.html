@@ -129,6 +129,12 @@
         </div>
     </section>
 
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="fixed inset-0 bg-black/80 hidden z-[60] items-center justify-center p-4">
+        <img id="lightbox-img" src="" alt="Büyük görüntü" class="max-h-[90vh] max-w-[90vw] object-contain rounded shadow">
+        <button id="lightbox-close" aria-label="Kapat" class="absolute top-4 right-4 text-white text-3xl leading-none">&times;</button>
+    </div>
+
     <!-- Video Galeri
     <section class="py-8 pt-0 md:pt-4 pb-16 bg-gray-50">
         <div class="container mx-auto px-4">
@@ -237,6 +243,42 @@
             once: true
         });
         feather.replace();
+
+        // Lightbox for Foto Galeri
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxClose = document.getElementById('lightbox-close');
+        const galleryImages = document.querySelectorAll('#foto-section img');
+
+        function openLightbox(src, alt){
+            lightboxImg.src = src;
+            lightboxImg.alt = alt || 'Büyük görüntü';
+            lightbox.classList.remove('hidden');
+            lightbox.classList.add('flex');
+        }
+
+        function closeLightbox(){
+            lightbox.classList.add('hidden');
+            lightbox.classList.remove('flex');
+            lightboxImg.src = '';
+        }
+
+        galleryImages.forEach(function(img){
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function(){
+                openLightbox(img.getAttribute('src'), img.getAttribute('alt'));
+            });
+        });
+
+        lightboxClose.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e){
+            if(e.target === lightbox){
+                closeLightbox();
+            }
+        });
+        document.addEventListener('keydown', function(e){
+            if(e.key === 'Escape') closeLightbox();
+        });
     </script>
 </body>
 </html>
